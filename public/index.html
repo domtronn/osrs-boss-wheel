@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSRS Boss Wheel</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="result" class="result"></div>
+
+    <div class="main-layout">
+      <div class="config-selector">
+        <label class="radio-label">
+          <input type="radio" name="config" value="team" checked>
+          <span>Team</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="config" value="duos">
+          <span>Duos</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="config" value="solos">
+          <span>Solos</span>
+        </label>
+      </div>
+
+      <div class="wheel-container">
+        <div class="pointer"></div>
+        <canvas id="wheel" width="900" height="900"></canvas>
+      </div>
+
+      <div class="button-container">
+        <button id="spin-button" class="spin-button">SPIN</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/app.ts"></script>
+</body>
+</html>
