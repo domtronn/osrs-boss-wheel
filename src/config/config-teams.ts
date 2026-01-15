@@ -1,7 +1,7 @@
 import { WheelConfig } from "./config-base";
 
-// Team activities - Raids and group bosses
-export const teamConfig: WheelConfig = {
+// Teams activities - Raids and group bosses
+export const teamsConfig: WheelConfig = {
   spinDuration: 6000,
   spinVariance: 4000,
   items: [

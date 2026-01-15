@@ -19,6 +19,11 @@ Bun.serve({
           entrypoints: [filePath],
           target: "browser",
           format: "esm",
+          define: {
+            "process.env.DISCORD_WEBHOOK_ID": JSON.stringify(process.env.DISCORD_WEBHOOK_ID || ""),
+            "process.env.DISCORD_WEBHOOK_TOKEN": JSON.stringify(process.env.DISCORD_WEBHOOK_TOKEN || ""),
+            "process.env.DISCORD_TOTP_SECRET": JSON.stringify(process.env.DISCORD_TOTP_SECRET || ""),
+          },
         });
 
         if (result.outputs.length > 0) {

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'OSRS';
-  src: url('/osrs.ttf') format('truetype');
+  src: url('./osrs.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -167,15 +167,13 @@ h1 {
   height: 300px;
   object-fit: contain;
   animation: bounceIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  filter: drop-shadow(0 0 30px rgba(255, 255, 0, 0.8));
+  /* filter: drop-shadow(0 0 30px rgba(255, 255, 0, 0.8)); */
 }
 
 .result-text {
   font-size: 4rem;
   font-weight: bold;
-  color: #FFFF00;
-  text-shadow: 3px 3px 0px #000000,
-               0 0 20px rgba(255, 255, 0, 0.5);
+  color: white;
   letter-spacing: 3px;
   animation: textPulse 0.8s ease;
   text-align: center;
@@ -194,7 +192,7 @@ h1 {
   gap: 1rem;
   padding: 1rem 2rem;
   background: #000000;
-  color: #FFFF00;
+  color: white;
   border: 3px solid #000000;
   border-radius: 8px;
   font-size: 1.5rem;
@@ -207,8 +205,8 @@ h1 {
 }
 
 .result-link:hover {
-  border-color: #FFFF00;
-  box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+  border-color: white;
+  box-shadow: 0 0 15px white;
   transform: translateY(-3px);
 }
 
@@ -264,4 +262,108 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* OTP Modal */
+.otp-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.otp-modal.show {
+  opacity: 1;
+}
+
+.otp-modal-content {
+  background: #1a1a1a;
+  border: 3px solid #FFFF00;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(255, 255, 0, 0.3);
+}
+
+.otp-input-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.otp-digit {
+  width: 50px;
+  height: 60px;
+  font-family: 'OSRS', serif;
+  font-size: 2rem;
+  text-align: center;
+  background: #000000;
+  color: #FFFF00;
+  border: 3px solid #444;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.otp-digit:focus {
+  outline: none;
+  border-color: #FFFF00;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  background: #1a1a1a;
+  color: #FFFF00;
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  font-family: 'OSRS', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #000000;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  transition: transform 0.3s ease;
+  border: 3px solid #FFFF00;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast-success {
+  background: #1a3a1a;
+  border-color: #00ff00;
+  color: #00ff00;
+}
+
+.toast-error {
+  background: #3a1a1a;
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+/* Discord button styling */
+.discord-link {
+  background: #5865F2 !important;
+  border-color: #5865F2 !important;
+}
+
+.discord-link:hover {
+  color: white !important;
+  border-color: white !important;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.5) !important;
 }

@@ -7,13 +7,19 @@
     "dev": "bun run index.ts",
     "build": "bun run build.ts",
     "start": "bun run index.ts",
-    "deploy": "bun run build && gh-pages -d dist"
+    "deploy": "bun run build && gh-pages -d dist",
+    "otp": "bun run otp.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/qrcode": "^1.5.6",
     "gh-pages": "^6.1.1"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "otpauth": "^9.4.1",
+    "qrcode": "^1.5.4"
   }
 }
