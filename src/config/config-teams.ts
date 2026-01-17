@@ -25,5 +25,6 @@ export const teamsConfig: WheelConfig = {
 
     { name: "The Hueycoatl", weight: 2, imageUrl: "https://oldschool.runescape.wiki/images/The_Hueycoatl.png", wikiUrl: "https://oldschool.runescape.wiki/w/The_Hueycoatl" },
     { name: "Scurrius", weight: 1, imageUrl: "https://oldschool.runescape.wiki/images/Scurrius.png", wikiUrl: "https://oldschool.runescape.wiki/w/Scurrius" },
+    { name: "Zalcano", weight: 3, imageUrl: "https://oldschool.runescape.wiki/images/thumb/Zalcano.png/400px-Zalcano.png?6244d", wikiUrl: "https://oldschool.runescape.wiki/w/Zalcano/Strategies" },
   ]
 };
